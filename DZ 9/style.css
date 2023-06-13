@@ -322,3 +322,55 @@ a {
 .services_big {
     box-shadow: 15px 25px 60px -5px rgba(0, 0, 0, 0.1);
 }
+
+.section4-content {
+    display: grid;
+    grid-template-columns: 1fr 577px;
+}
+
+.section4_image img {
+    position: absolute;
+    z-index: -1;
+    left: calc(50% - 945px);
+}
+
+.section4_What_we_do {
+    padding: 107px 5px 0px;
+}
+
+.section4_header_title {
+    font-size: 45px;
+    line-height: 53px;
+    padding-bottom: 19px;
+}
+
+.section4_text {
+    font-size: 16px;
+    line-height: 150%;
+    color: #666666;
+}
+
+.item_list {
+    display: flex;
+    gap: 29px;
+    padding: 17px 49px 17px 30px;
+
+}
+
+.item_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section4 .title {
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.item_list .text {
+    font-family: Gilroy-Regular;
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 150%;
+}
