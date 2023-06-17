@@ -230,11 +230,3 @@ button {
     font-weight: 400;
     line-height: 19px;
 }
-
-@media (max-width: 1024px) {
-
-    .content {
-        padding-left: var(--indent-tablet);
-        padding-right: var(--indent-tablet);
-    }
-}
