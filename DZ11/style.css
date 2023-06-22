@@ -15,9 +15,9 @@
     --lightcolor3: #FBFBFB;
     --font_text: #5D5D5D;
     --buttoncolor: #FF6A6A;
-    --dark_imgage: rgba(33, 22, 22, 0.7);
+    --dark_imgage: rgb(33, 22, 22);
     --indent-desktop: calc(50% - 570px);
-    --indent-tablet: calc(50% - 376px);
+    --indent-tablet: calc(50% - 368px);
 }
 
 body {
@@ -86,7 +86,9 @@ h5 {
 .right {
     gap: 33px;
 }
-
+ .logo{
+    margin-bottom: -3px;
+ }
 .section_top {
     background-color: var(--pink);
 }
@@ -98,11 +100,11 @@ h5 {
 }
 
 .header_content {
-    padding-top: 290px;
-    padding-left: 63.42px;
     display: flex;
     flex-direction: row;
     gap: 16px;
+    justify-content: center;
+    align-items: center;
 }
 
 .box {
@@ -110,12 +112,17 @@ h5 {
     height: 92px;
     background-color: var(--purple);
 }
-
-.subtitle {
+.header_info{
+    display: flex;
+    flex-direction: column;
+}
+.section_top .subtitle {
     font-size: 32px;
     font-weight: 700;
     line-height: 38px;
     color: var(--black);
+    text-align: left;
+    padding-bottom: 0px;
 }
 
 .purple_title {
@@ -123,24 +130,35 @@ h5 {
 }
 
 .offer {
-    padding-top: 65px;
+    padding-top: 64px;
     display: grid;
-    grid-template-columns: repeat(3, 360px);
+    grid-template-columns: repeat(3, 31.5%);
     gap: 30px;
     padding-bottom: 96px;
 
 }
 
-.offer .item {
+.item_sale{
     background-color: var(--dark_imgage);
-    position: relative;
-    height: 260px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 
 }
+.item_sale img{
+    opacity: 30%;
+}
+.sale_content{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
 
+    justify-content: center;
+
+}
+ 
 .offer h3 {
     color: var(--purple);
     text-align: center;
@@ -155,18 +173,12 @@ h5 {
     grid-column: 1/4;
 }
 
-.view_img {
-    position: absolute;
-    z-index: -1;
-    top: 0px;
-    left: 0px;
-}
 
-.title2, .subtitle {
+.catalog .title2, .catalog .subtitle {
     text-align: center;
 }
 
-.subtitle {
+.catalog .subtitle {
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
@@ -238,6 +250,8 @@ button {
 .feature .content {
     display: grid;
     grid-template-columns: repeat(3, 360px);
+    justify-items: center;
+    align-items: center;
     gap: 30px;
 }
 
@@ -287,32 +301,35 @@ button {
 }
 
 .subscribe {
-    background-image: url(img/backgroundimg.png);
+    background-color: rgba(244, 244, 244);
     position: relative;
     z-index: -2;
-    height: 448px;
+    min-height: 448px;
+    overflow: hidden;
 
 }
-
-.subscribe .light {
-    position: absolute;
+.subscribe_background{
     width: 100%;
     height: 100%;
-    background-color: rgba(244, 244, 244, 0.7);
+    opacity: 30%;
+    position: absolute;
+    overflow: hidden;
+    background-image: url(img/backgroundimg.png);
+    background-size: cover;
     z-index: -1;
-
+    bottom: 0px;
 }
 
 .subscribe .content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
-
-
+    padding-bottom: 156px;
 }
 
-.subscribe .item1 {
+
+.subscribe_item1 {
     padding-top: 97px;
     width: 360px;
     display: flex;
@@ -321,12 +338,12 @@ button {
     align-items: center;
 }
 
-.subscribe .img {
+.subscribe_item1 .img {
     width: 96px;
     height: 96px;
 }
 
-.subscribe img {
+.subscribe_item1 img {
     width: 100%;
     border-radius: 50%;
 }
@@ -435,4 +452,53 @@ button {
     width: 32px;
     height: 32px;
     background-color: var(--white);
+}
+
+@media (min-width:768px) and (max-width:1024px){
+    .content{
+        padding-left: var(--indent-tablet);
+        padding-right: var(--indent-tablet);
+    }
+
+    .slaid{
+        width: 386px;
+        height: 386px;
+    }
+    .section_top .title{
+        font-size: 44px;
+    }
+    .section_top .subtitle{
+        font-size: 24px;
+    }
+    .offer {
+        grid-template-columns: repeat(3, 30.2%);
+    }
+    .catalog_grid {
+        grid-template-columns: repeat(2, 360px);
+    }
+    .feature .content{
+        grid-template-columns: 1fr;
+        gap: 0px;
+        padding-bottom: 64px;
+    }
+    .feature .item{
+        width: 360px;
+        padding-top: 48.17px;
+    }
+    .feature .icon1, .feature .icon2, .feature .icon3{
+        padding-top: 0;
+    }
+    .feature .text{
+        padding-bottom: 0px;
+    }
+    .subscribe .content{
+        grid-template-columns: 1fr;
+        padding-bottom: 140px;
+    }
+    .subscribe h2{
+        padding-top: 48px;
+    }
+    .subscribe_background {
+        background-image: url(img/backgroundimgx768.png);
+    }
 }
