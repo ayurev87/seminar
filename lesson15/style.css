@@ -1,0 +1,202 @@
+@keyframes heartbeat {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+.list:hover::after {
+    content: ' Здесь';
+    color: red;
+}
+
+.list:before {
+    color: rgb(47, 0, 255);
+}
+
+.icon:hover path {
+    fill: red;
+}
+
+.Button {
+    display: block;
+    width: 190px;
+    height: 60px;
+    border: 1px solid purple;
+    text-align: center;
+    line-height: 60px;
+    color: purple;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: all 0.3s;
+    animation: heartbeat 1.5s ease-in-out 3s infinite both;
+
+}
+
+.Button:hover {
+    background-color: purple;
+    color: white;
+}
+
+.drive {
+    margin-top: 32px;
+}
+
+.drive:hover .car {
+    margin-left: 1400px;
+}
+
+.car {
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+    transition: margin 3s;
+}
+
+.car-1 {
+    transition-timing-function: ease;
+}
+
+.car-2 {
+    transition-timing-function: ease-in;
+}
+
+.car-3 {
+    transition-timing-function: ease-in-out;
+}
+
+.car-4 {
+    transition-timing-function: ease-out;
+}
+
+.car-5 {
+    transition-timing-function: linear;
+}
+
+.car-6 {
+    transition-timing-function: step-start;
+}
+
+.car-7 {
+    transition-timing-function: step-end;
+}
+
+.car-8 {
+    transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.car-9 {
+    transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.bord {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.bord-item {
+    width: 200px;
+    height: 150px;
+    border: 1px solid black;
+    transition: transform 1s;
+}
+
+.bord_item-1:hover {
+    transform: translate(200px, -100px) scale(2);
+
+}
+
+.bord_item-2:hover {
+    transform: translateY(-100px) scale(2);
+
+}
+
+.bord_item-3:hover {
+    transform: translate(-200px, -100px) scale(2);
+
+}
+
+.bord1 {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.bord-item1 {
+    position: absolute;
+    width: 150px;
+    height: 86px;
+    background-color: green;
+    transition: transform 1s;
+}
+
+.bord1 .bord_item-1 {
+    transform: rotate(60deg);
+
+}
+
+.bord1 .bord_item-3 {
+    transform: rotate(-60deg);
+
+}
+
+.bord2 {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.bord-item2 {
+    position: absolute;
+    width: 150px;
+    height: 86px;
+    background-color: green;
+    transition: transform 1s;
+}
+
+.bord2 .bord_item-1 {
+    transform: skew(15deg, -15deg);
+
+}
