@@ -61,6 +61,7 @@ h5 {
 
 .header {
     background-color: var(--dark);
+    position: relative;
 }
 
 .nav {
@@ -85,10 +86,73 @@ h5 {
 
 .right {
     gap: 33px;
+
+
+
+
+
 }
 
 .logo {
     margin-bottom: -3px;
+}
+
+.dr {}
+
+.dropdown {
+    position: absolute;
+    top: 75px;
+    right: 0px;
+    width: 245px;
+    height: 634px;
+    overflow: hidden;
+}
+
+.dropdown_menu {
+    position: absolute;
+    padding: 32px;
+    width: 168px;
+    top: 0px;
+    right: 0px;
+    background-color: var(--white);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    list-style-type: none;
+
+}
+
+.menu_title a {
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+
+}
+
+
+
+.cart {
+    position: relative;
+}
+
+.cart_quantity::before {
+    position: absolute;
+    top: -9px;
+    right: -9px;
+    content: '5';
+    width: 19px;
+    height: 19px;
+    background-color: var(--purple);
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
 }
 
 .section_top {
