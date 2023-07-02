@@ -226,6 +226,8 @@ h5 {
 
 .nav {
     display: flex;
+    padding-left: 16px;
+    padding-right: 16px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -600,6 +602,7 @@ h5 {
     flex-wrap: wrap;
     flex-direction: column;
     justify-items: center;
+    align-items: center;
 }
 
 .feature .icon1 {
@@ -949,6 +952,10 @@ h5 {
         padding-top: 48px;
         padding-bottom: 81px;
         gap: 46.7px;
+    }
+
+    .feature .item {
+        width: 360px;
     }
 
     .feature .icon1, .feature .icon2, .feature .icon3 {
