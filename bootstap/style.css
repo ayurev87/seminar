@@ -1,0 +1,12 @@
+.bg-body-tertiary {
+    background-color: red !important;
+}
+
+.center {
+    padding-left: calc(50% - 500px);
+    padding-right: calc(50% - 500px);
+}
+
+.product-box {
+    gap: 32px;
+}
